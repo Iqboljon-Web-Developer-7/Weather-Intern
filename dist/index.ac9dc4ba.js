@@ -715,7 +715,7 @@ function initializeApp() {
             }
         });
         if (showLabels) map.labels({
-            labelColor: "#70e000",
+            labelColor: "#38b000",
             fontSize: 8
         });
     }
