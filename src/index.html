@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Weather Dashboard</title>
+</head>
+
+<body>
+    <!-- Login Form -->
+    <form id="loginForm" class="login-form">
+        <h2>Welcome! Please Log In</h2>
+        <input type="text" id="username" placeholder="havoyuli" />
+        <input type="password" id="password" placeholder="havo123yuli" />
+        <button id="loginButton">Log In</button>
+    </form>
+
+    <div id="app">
+        <header>
+            <button id="logoutButton" class="logout-btn">Logout</button>
+            <h1>Weather Dashboard</h1>
+            <div>
+                <label class="switch">
+                    <input type="checkbox" id="modeToggle" />
+                    <span class="slider round">
+                        <div class="circle"></div>
+                    </span>
+                </label>
+                <label class="switch">
+                    <input type="checkbox" id="modeToggle2" />
+                    <span class="slider round">
+                        <div class="circle circle2"></div>
+                    </span>
+                </label>
+
+            </div>
+        </header>
+
+        <div class="controls">
+            <button id="temperature" class="btn active">Havo harorati</button>
+            <button id="windSpeed" class="btn">Shamol</button>
+            <button id="cloudCoverage" class="btn">Bulutliligi</button>
+        </div>
+        <div class="all-status">
+            <div id="temps-status" class="color-group">
+                <div class="color-container">
+                    <div class="color-box deep-blue"></div>
+                    -30°C
+                </div>
+                <div class="color-container">
+                    <div class="color-box ice-blue"></div>
+                    -20°C
+                </div>
+                <div class="color-container">
+                    <div class="color-box light-blue"></div>
+                    -10°C
+                </div>
+                <div class="color-container">
+                    <div class="color-box pale-grayish-blue"></div>
+                    0°C
+                </div>
+                <div class="color-container">
+                    <div class="color-box light-green"></div>
+                    +10°C
+                </div>
+                <div class="color-container">
+                    <div class="color-box soft-yellow"></div>
+                    +20°C
+                </div>
+                <div class="color-container">
+                    <div class="color-box light-orange"></div>
+                    +30°C
+                </div>
+                <div class="color-container">
+                    <div class="color-box deep-orange"></div>
+                    +40°C
+                </div>
+                <div class="color-container">
+                    <div class="color-box bright-red"></div>
+                    +50°C
+                </div>
+            </div>
+            <div id="winds-status" class="color-group" style="display: none;">
+                <div class="color-container">
+                    <div class="color-box light-cyan"></div>
+                    0–10 km/h
+                </div>
+                <div class="color-container">
+                    <div class="color-box pale-blue"></div>
+                    10–20 km/h
+                </div>
+                <div class="color-container">
+                    <div class="color-box soft-teal"></div>
+                    20–40 km/h
+                </div>
+                <div class="color-container">
+                    <div class="color-box bright-blue"></div>
+                    40–60 km/h
+                </div>
+                <div class="color-container">
+                    <div class="color-box deep-navy-blue"></div>
+                    60+ km/h
+                </div>
+            </div>
+            <div id="clouds-status" class="color-group" style="display: none;">
+                <div class="color-container">
+                    <div class="color-box light-yellow"></div>
+                    0–10%
+                </div>
+                <div class="color-container">
+                    <div class="color-box soft-yellow"></div>
+                    10–30%
+                </div>
+                <div class="color-container">
+                    <div class="color-box light-gray"></div>
+                    30–60%
+                </div>
+                <div class="color-container">
+                    <div class="color-box gray"></div>
+                    60–90%
+                </div>
+                <div class="color-container">
+                    <div class="color-box dark-gray"></div>
+                    90–100%
+                </div>
+            </div>
+        </div>
+        <div id="container" class="container">
+            <div id="mapLoadingOverlay" class="map-loading-overlay">
+                <div class="loader"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.3/d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.9/topojson.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/datamaps/0.5.9/datamaps.world.min.js"></script>
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <script src="./index.mjs" type="module"></script>
+</body>
+
+</html>
